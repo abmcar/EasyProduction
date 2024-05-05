@@ -1,3 +1,6 @@
-item.easyproduction.temp.name=测试物品
+item.easyproduction.time_in_a_card.name=时间之卡
 tile.easyproduction.temp_block.name=测试Block
 itemGroup.easyproduction=简单生产
+tooltip.easyproduction.time_in_a_card=%d 时 | %d 分 | %d 秒
+message.easyproduction.time_in_a_card.status=时间速率: %dx, 剩余时间: %d s
+message.easyproduction.time_in_a_card.empty=无加速效果

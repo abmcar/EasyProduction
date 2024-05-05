@@ -1,3 +1,6 @@
-item.easyproduction.temp.name=TempItem
+item.easyproduction.time_in_a_card.name=Time in a card
 tile.easyproduction.temp_block.name=TestBlock
 itemGroup.easyproduction=Easy Production Item Group
+tooltip.easyproduction.time_in_a_card=%d H | %d M | %d S
+message.easyproduction.time_in_a_card.status=Time Rate: %dx, RemainingTime: %d s
+message.easyproduction.time_in_a_card.empty=No effect

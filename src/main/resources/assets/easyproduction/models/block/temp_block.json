@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "easyproduction:blocks/temp_block",
+    "down": "easyproduction:blocks/temp_block",
+    "up": "easyproduction:blocks/temp_block",
+    "north": "easyproduction:blocks/temp_block",
+    "south": "easyproduction:blocks/temp_block",
+    "west": "easyproduction:blocks/temp_block",
+    "east": "easyproduction:blocks/temp_block"
+  }
+}
