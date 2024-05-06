@@ -15,7 +15,7 @@ public class ItemManager {
     public static TimeInACard timeInACard = new TimeInACard();
 
     @SubscribeEvent
-    public static void registerItem(RegistryEvent.Register<Item> event) {
+    public static void onItemRegister(RegistryEvent.Register<Item> event) {
         addItems();
         for (Item item : items) {
             event.getRegistry().register(item);

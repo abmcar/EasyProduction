@@ -19,7 +19,7 @@ public class BlockManager {
     public static TempBlock tempBlock = new TempBlock();
 
     @SubscribeEvent
-    public static void registerBlock(RegistryEvent.Register<Block> event) {
+    public static void onBlockRegister(RegistryEvent.Register<Block> event) {
         // 和物品一样，每一个方块都有唯一一个注册名，不能使用大写字母。
         addBlocks();
         for (Block block : blocks) {
@@ -28,7 +28,7 @@ public class BlockManager {
     }
 
     @SubscribeEvent
-    public static void registerItem(RegistryEvent.Register<Item> event) {
+    public static void onItemRegister(RegistryEvent.Register<Item> event) {
         // 注意这个 ItemBlock 使用了和它对应的方块一样的注册名。
         // 对于所有有物品形态的方块，其物品的注册名和它自己的注册名需要保持一致。
         addBlocks();

@@ -1,5 +1,6 @@
 package top.abmcar.earyproduction.common.entity;
 
+import io.netty.buffer.ByteBuf;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
@@ -10,9 +11,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
 import top.abmcar.earyproduction.utils.NBTUtil;
 
-public class EntityTimeAccelerator extends Entity {
+public class EntityTimeAccelerator extends Entity implements IEntityAdditionalSpawnData {
 
 	int remainingTime;
 
@@ -136,5 +138,16 @@ public class EntityTimeAccelerator extends Entity {
 		compound.setInteger("timeRate", getTimeRate());
 	}
 
+	@Override
+	public void writeSpawnData(ByteBuf buffer) {
+		buffer.writeInt(target.getX());
+		buffer.writeInt(target.getY());
+		buffer.writeInt(target.getZ());
+	}
+
+	@Override
+	public void readSpawnData(ByteBuf ad) {
+		this.target = new BlockPos(ad.readInt(), ad.readInt(), ad.readInt());
+	}
 
 }
